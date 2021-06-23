@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: http-api
+Version: 0.2.2
+Summary: HTTP API for Python using builtin SimpleHTTPServer
+Home-page: UNKNOWN
+Author: Syban
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+
+# Description
+
+This is a basic HTTP API based on the processes that Flask uses, but in a simple (and more limitating) way.
+It's meant to be easy to use and short to the point
+
+I described a lot the process in the source. Don't be shy to check it out if you want to understand it
+There's also an example.py with some basics inside
+
+# Functionnalities 
+
+- Routes with variables
+- Request handler
+- Security handler (which can be modified with an abstract class already present)
+
+# Basic example : 
+
+    from http_api.server import HTTPServerAPI
+    http = HTTPServerAPI()
+
+    @http.url("/")
+    def index():
+        # Do something
+
+    http.run()
+
+# Security concerns
+HTTPServer : https://docs.python.org/3/library/http.server.html
+
+
+

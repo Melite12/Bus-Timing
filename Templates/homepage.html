@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title%} SG Buses{%endblock%}
+
+{% block body %}
+
+    <h1>SG Buses </h1>
+
+    <form action = "/" method = "POST">
+        <label> Input Bus Stop Code </label>
+        <input type = "text" name = "code" />
+
+        <button type = "submit"> Submit </button>
+    </form>
+{% endblock %}
